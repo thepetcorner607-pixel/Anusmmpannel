@@ -3,53 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Dashboard</title>
+    <title>The Pet Corner</title>
     <style>
+        /* बेसिक स्टाइलिंग */
         body {
             font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            justify-content: flex-start;
         }
-        .navbar {
-            background-color: #333;
-            color: white;
-            padding: 15px;
+        .site-title {
+            font-size: 40px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
             text-align: center;
+            background: linear-gradient(
+                90deg,
+                #00ff88,
+                #00c3ff,
+                #ffcc00,
+                #ff66cc
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+            animation: glow 2s infinite alternate;
+            margin: 20px;
         }
-        .container {
-            padding: 20px;
+        @keyframes glow {
+            from {
+                filter: drop-shadow(0 0 5px #00ff88);
+            }
+            to {
+                filter: drop-shadow(0 0 15px #00c3ff);
+            }
         }
-        .button {
-            display: inline-block;
+        .login-form {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-top: 20px;
+        }
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
             background-color: #2874f0;
             color: white;
-            padding: 10px 20px;
-            margin: 10px 0;
-            text-decoration: none;
-            border-radius: 5px;
+            border: none;
+            border-radius: 4px;
             cursor: pointer;
+            font-size: 16px;
         }
-        .section {
-            background: white;
+        .login-btn:hover {
+            background-color: #205bb5;
+        }
+        .header {
+            background:#2874f0;
+            color:white;
+            padding:15px;
+            text-align:center;
+            font-size:28px;
+            font-weight:bold;
+            width: 100%;
+        }
+        .pet-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .pet-card {
+            width: 250px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .pet-card:hover {
+            transform: translateY(-5px);
+        }
+        .pet-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .pet-info {
+            padding: 15px;
+        }
+        .pet-info h3 {
+            margin: 0;
+            color: #333;
+        }
+        .pet-info p {
+            color: #666;
+        }
+        .contact {
+            background: #009688;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            width: 100%;
+        }
+        .btn {
+            display: inline-block;
+            background: #25D366;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        Instagram Dashboard
+    <header class="header">
+        🐾 THE PET CORNER 🐾
+    </header>
+
+    <h1 class="site-title">🐾 THE PET CORNER 🐾</h1>
+
+    <div class="login-form">
+        <h2>Welcome</h2>
+        <form onsubmit="return validateForm();">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" id="username" placeholder="Enter name" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter Password" required>
+            </div>
+            <button class="login-btn" type="submit">Sign In</button>
+        </form>
     </div>
-    <div class="container">
-        <div class="section">
-            <h2>Services</h2>
-            <a href="#" class="button">Create Order</a>
-            <a href="#" class="button">Track Order</a>
-            <a href="#" class="button">Order History</a>
+
+    <div class="pet-container">
+        <div class="pet-card">
+            <img src="logo/forselldog1.jpg" alt="German Shepherd">
+            <div class="pet-info">
+                <h3>German Shepherd💥</h3>
+                <p>Friendly & Intelligent Dog</p>
+                <button onclick="showDetails('German Shepherd')">View Details</button>
+            </div>
+        </div>
+
+        <div class="pet-card">
+            <img src="logo/forselldog2.jpg" alt="Rottweiler">
+            <div class="pet-info">
+                <h3>Rottweiler💥</h3>
+                <p>Energetic & Beautiful Dog</p>
+                <button onclick="showDetails('Rottweiler')">View Details</button>
+            </div>
+        </div>
+
+        <div class="pet-card">
+            <img src="logo/forselldog3.jpg" alt="Labrador">
+            <div class="pet-info">
+                <h3>Labrador💥</h3>
+                <p>Small & Cute Companion</p>
+                <button onclick="showDetails('Labrador')">View Details</button>
+            </div>
         </div>
     </div>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>📞 80006-16511</p>
+        <p>📧 thepetcorner607@gmail.com</p>
+        <p>📍 Salasar, Churu, Rajasthan</p>
+        <a class="btn" href="https://wa.me/918000616511">WhatsApp Us</a>
+    </section>
+
+    <footer>
+        © 2026 THE PET CORNER | ® All Rights Reserved By Anil Choudhary 🐦‍🔥
+    </footer>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if (username === "" || password === "") {
+                alert("कृपया यूज़रनेम और पासवर्ड भरें।");
+                return false;
+            }
+            return true;
+        }
+
+        function showDetails(breed) {
+            if (breed === "German Shepherd") {
+                alert(
+                    "Gsd, double coat\n\nLife: 3 - 6 months\nNature: Friendly\nPrice: ₹11,500 - ₹15,000"
+                );
+            }
+            if (breed === "Rottweiler") {
+                alert(
+                    "Rottweiler\n\nLife: 3-6 months\nNature: Energetic\nPrice: ₹13,000 - ₹18,000"
+                );
+            }
+            if (breed === "Labrador") {
+                alert(
+                    "Labrador\n\nLife: 3-8 months\nNature: Cute & Loyal\nPrice: ₹5,000 - ₹15,000"
+                );
+            }
+        }
+    </script>
 </body>
 </html>
