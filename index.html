@@ -18,11 +18,18 @@
 <div id="particles-js"></div>
 
 <!-- Navigation -->
+<!-- Navigation -->
 <header>
     <nav class="navbar">
         <div class="logo">🐾 THE PET CORNER</div>
 
-        <ul class="nav-links">
+        <!-- Three Lines Button -->
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <!-- Menu Links -->
+        <ul class="nav-links" id="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#pets">Pets</a></li>
@@ -153,6 +160,11 @@ particlesJS("particles-js", {
   }
 });
 </script>
-
+<script>
+function toggleMenu() {
+    document.getElementById("nav-menu")
+    .classList.toggle("show");
+}
+</script>
 </body>
      </html>
