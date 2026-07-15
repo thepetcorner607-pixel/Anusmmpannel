@@ -47,7 +47,7 @@ placeholder="Search for pet accessories, food, toys...">
   <div id="cart-items">
     Products Added: <span id="total-items">0</span>
   </div>
-
+<p>Total Amount: ₹<span id="total-price">0</span></p>
   <br>
 
   <button onclick="checkout()">
@@ -183,7 +183,13 @@ products.length;
 
 document.getElementById("total-items").innerText =
 products.length;
-  
+let total = 0;
+
+products.forEach(item=>{
+    total += Number(item.price);
+});
+
+document.getElementById("total-price").innerText = total;  
 function addToCart(name, price){
 
   let products =
@@ -204,6 +210,13 @@ function addToCart(name, price){
 
   document.getElementById("total-items").innerText =
     products.length;
+  let total = 0;
+
+products.forEach(item=>{
+    total += Number(item.price);
+});
+
+document.getElementById("total-price").innerText = total;
 }
 function openCart() {
   let cartBox = document.getElementById("cart-box");
@@ -236,6 +249,24 @@ function checkout(){
     encodeURIComponent(message)
   );
 }
+  function payNow(){
+
+    let products =
+    JSON.parse(localStorage.getItem("products")) || [];
+
+    let total = 0;
+
+    products.forEach(item=>{
+        total += Number(item.price);
+    });
+
+    let upi =
+    "upi://pay?pa=8000616511@ybl&pn=THE PET CORNER&am="
+    + total +
+    "&cu=INR";
+
+    window.location.href = upi;
+  }
   </script>
 </div>
 
