@@ -103,7 +103,7 @@ placeholder="Search for pet accessories, food, toys...">
 31% OFF • Free Delivery
 </p>
 
-<button onclick="addToCart()">
+<button onclick="addToCart('Pet Bed',799)">
 Add To Cart
 </button>
 
@@ -124,7 +124,7 @@ Add To Cart
 20% OFF • Free Delivery
 </p>
 
-<button onclick="addToCart()">
+<button onclick="addToCart('Dog Toy',199)">
 Add To Cart
 </button>
 
@@ -145,7 +145,7 @@ Add To Cart
 29% OFF • Free Delivery
 </p>
 
-<button onclick="addToCart()">
+<button onclick="addToCart('Dog Collar',299)">
 Add To Cart
 </button>
 
@@ -183,20 +183,27 @@ document.getElementById(
 ).innerText = cart;
 
 function addToCart(){
+function addToCart(name, price){
 
-cart++;
+  let products =
+    JSON.parse(localStorage.getItem("products")) || [];
 
-localStorage.setItem(
-"cart",
-cart
-);
+  products.push({
+    name: name,
+    price: price
+  });
 
-document.getElementById(
-"cart-count"
-).innerText = cart;
+  localStorage.setItem(
+    "products",
+    JSON.stringify(products)
+  );
 
+  document.getElementById("cart-count").innerText =
+    products.length;
+
+  document.getElementById("total-items").innerText =
+    products.length;
 }
-
 function openCart() {
   let cartBox = document.getElementById("cart-box");
 
@@ -207,15 +214,27 @@ function openCart() {
   }
 }
 
-function checkout() {
+function checkout(){
+
+  let products =
+    JSON.parse(localStorage.getItem("products")) || [];
+
+  let message = "I want to buy:\n\n";
+
+  products.forEach((item,index)=>{
+    message +=
+      (index+1) + ". " +
+      item.name +
+      " - ₹" +
+      item.price +
+      "\n";
+  });
+
   window.open(
-    "https://wa.me/918000616511?text=I want to buy these products"
+    "https://wa.me/918000616511?text=" +
+    encodeURIComponent(message)
   );
-  }
-  function payNow() {
-  window.location.href =
-    "upi://pay?pa=8000616511@ybl&pn=THEPETCORNER&cu=INR";
-  }
+}
   </script>
 </div>
 
