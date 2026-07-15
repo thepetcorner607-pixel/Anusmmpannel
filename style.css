@@ -137,23 +137,49 @@ footer{
 }
 
 /* ===== MOBILE RESPONSIVE ===== */
-@media(max-width:768px){
+@media (max-width:768px){
 
     .navbar{
-        flex-direction:column;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-btn{
+    display:none;
+    font-size:30px;
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+    .menu-btn{
+        display:block;
     }
 
     .nav-links{
+        display:none;
         flex-direction:column;
-        text-align:center;
-        margin-top:10px;
+        background:#2874f0;
+        width:100%;
+        padding:15px;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+}
+    .nav-links li{
+        margin: 10px 0;
     }
 
     .card{
-        width:90%;
+        width: 90%;
     }
 
     .hero h1{
-        font-size:28px;
+        font-size: 28px;
     }
 }
