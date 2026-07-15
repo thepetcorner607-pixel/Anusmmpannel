@@ -183,3 +183,39 @@ footer{
         font-size: 28px;
     }
 }
+.founder{
+    text-align:center;
+    padding:40px 20px;
+    background:#f5f5f5;
+}
+
+.founder-card{
+    background:white;
+    padding:30px;
+    border-radius:30px;
+    max-width:600px;
+    margin:auto;
+}
+
+.founder-card img{
+    width: 350px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+.founder-card{
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+.founder h2{
+    color:#009688;
+}
+
+.founder-text{
+    font-size:22px;
+    margin-top:20px;
+}
