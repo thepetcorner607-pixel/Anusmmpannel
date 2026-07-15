@@ -103,7 +103,13 @@ button:hover{
     width:250px;
     border-radius:15px;
 }
-
+.founder-img{
+    width:200px;
+    max-width:80%;
+    display:block;
+    margin:20px auto;
+    border-radius:20px;
+}
 /* ===== FOOTER ===== */
 footer{
     background:#333;
