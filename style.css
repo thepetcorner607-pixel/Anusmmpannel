@@ -118,7 +118,22 @@ footer{
     padding:20px;
     margin-top:40px;
 }
-
+/* ===== Instagram FLOAT BUTTON ===== */
+.instagram{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#E1306C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 1
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:25px;
+    text-decoration:none;
+}
 /* ===== WHATSAPP FLOAT BUTTON ===== */
 .whatsapp{
     position:fixed;
