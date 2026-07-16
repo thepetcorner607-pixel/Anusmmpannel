@@ -122,6 +122,8 @@ footer{
 .instagram{
     position:fixed;
     bottom:90px; /*WhatsApp se upar*/
+    width:45;
+    height:45;
     right:20px;
     z-index:999;
     background:#E1306C;
@@ -132,20 +134,22 @@ footer{
     color:white;
     padding:15px;
     border-radius:50%;
-    font-size:28px;
+    font-size:22px;
     text-decoration:none;
 }
 /* ===== WHATSAPP FLOAT BUTTON ===== */
 .whatsapp{
     position:fixed;
+    height:45;
+    width:45;
     bottom:20px;
     right:20px;
     z-index:999;
     background:#25D366;
     color:white;
-    padding:15px;
+    padding:10px;
     border-radius:50%;
-    font-size:28px;
+    font-size:22px;
     text-decoration:none;
 }
 
