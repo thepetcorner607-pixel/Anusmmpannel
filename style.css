@@ -166,14 +166,6 @@ body{
     }
 }
 /* ===== LIVE WALLPAPER ===== */
-#particles-js{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-1;
-}
 .vaccine-poster{
     width:90%;
     max-width:500px;
@@ -263,13 +255,4 @@ body{
 .founder-text{
     font-size: 20px;
     margin-top: 20px;
-}
-#particles-js{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: transparent;
 }
