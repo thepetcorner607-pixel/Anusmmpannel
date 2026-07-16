@@ -153,7 +153,8 @@ footer{
     text-decoration:none;
 }
 body{
-    background: #FFE4EA;
+    background: url("YOUR-IMAGE-PATH.jpg") center center/cover no-repeat fixed;
+    animation: zoomEffect 20s infinite alternate ease-in-out;
 }
 
 @keyframes zoomEffect{
