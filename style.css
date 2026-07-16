@@ -152,7 +152,19 @@ footer{
     font-size:22px;
     text-decoration:none;
 }
+body{
+    background: url("founder 1/founder1/5f7aacf1-d29a-4482-8ae8-9c6a9003ee17.jpeg") center center/cover no-repeat fixed;
+    animation: zoomEffect 20s infinite alternate ease-in-out;
+}
 
+@keyframes zoomEffect{
+    from{
+        background-size:100%;
+    }
+    to{
+        background-size:110%;
+    }
+}
 /* ===== LIVE WALLPAPER ===== */
 #particles-js{
     position:fixed;
