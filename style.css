@@ -1,21 +1,26 @@
 /* ===== BODY ===== */
 body{
     margin:0;
-    padding:60px;
+    padding:0;
     font-family: Arial, sans-serif;
-    background:#FFE4EA;
     color:#333;
+    background: url("background/black-labrador-dog-vector.jpg") no-repeat center center fixed;
+    background-size: cover;
+    animation: zoomEffect 20s infinite alternate ease-in-out;
 }
 
 /* ===== NAVIGATION ===== */
 .navbar{
-    background:#25D366;
+    background:#d32f2f;
     padding:15px 20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     width:100%;
     box-sizing:border-box;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 .logo{
