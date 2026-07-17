@@ -270,3 +270,8 @@ body{
         transform: translateY(0);
     }
 }
+header,
+nav,
+.navbar {
+    background: #d32f2f !important;
+}
