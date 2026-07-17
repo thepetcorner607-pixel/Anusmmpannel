@@ -13,8 +13,9 @@ body{
 /* ===== NAVIGATION ===== */
 .navbar{
     background:#d32f2f;
-    padding:15px 20px;
+    padding:20px;
     display:flex;
+    margin:0;
     justify-content:space-between;
     align-items:center;
     width:100%;
@@ -50,7 +51,7 @@ body{
 /* ===== HERO SECTION ===== */
 .hero{
     text-align:center;
-    padding:30px 20px;
+    padding:60px 20px;
 }
 
 .hero h1 {
