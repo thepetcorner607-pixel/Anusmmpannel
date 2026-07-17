@@ -47,9 +47,11 @@ body{
 }
 
 .video-section video {
-    width: 90%;
+    width: 95%;
     max-width: 900px;
-    border-radius: 15px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 20px;
 }
 .hero{
     text-align:center;
