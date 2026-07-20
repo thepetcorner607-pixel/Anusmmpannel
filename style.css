@@ -278,13 +278,3 @@ nav,
 .navbar {
     background: #87CEEB !important;
 }
-/* ===== Contact Us ===== */
-button{
-    background:#FFD700;
-    color:yellow;
-    border:none;
-    padding:none;
-    border-radius:none;
-    cursor:none;
-    font-size:none;
-}
